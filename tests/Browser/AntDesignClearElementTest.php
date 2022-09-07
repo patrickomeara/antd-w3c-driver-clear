@@ -20,7 +20,6 @@ class AntDesignClearElementTest extends DuskTestCase
                     ->waitFor('input[name=input]')
                     ->type('input', 'This clears the input')
                     ->type('ant-input', 'This adds to the existing text')
-                    ->stop()
                     ->assertInputValue('input', 'This clears the input')
                     ->assertInputValue('ant-input', 'This adds to the existing text');
         });

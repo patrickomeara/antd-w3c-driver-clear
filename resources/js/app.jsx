@@ -1,5 +1,5 @@
 import React from "react";
-import * as ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 import {Button, DatePicker, Input, Space, version} from 'antd';
 import "antd/dist/antd.css";
 
@@ -10,14 +10,12 @@ const App = () => {
       <div className="App">
         <h1>antd version: {version}</h1>
         <Space direction="vertical">
-          <input name="input" value={value} onChange={(e) => setValue(e.target.value)}/>
-          <Input name="ant-input" value={antValue} onChange={(e) => setAntValue(e.target.value)}/>
+          <input name="input" value={value} onChange={(e) => setValue(e.target.value)} style={{width: 400}} />
+          <Input name="ant-input" value={antValue} onChange={(e) => setAntValue(e.target.value)} style={{width: 400}} />
         </Space>
       </div>
   );
 };
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+const root = createRoot(document.getElementById("root"));
+root.render(<App />);
