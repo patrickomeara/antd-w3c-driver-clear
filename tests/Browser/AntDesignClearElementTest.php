@@ -16,8 +16,8 @@ class AntDesignClearElementTest extends DuskTestCase
     public function testExample()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->waitFor('input[name=input]')
+            $browser->visit('https://n98f62.csb.app/')
+                    ->waitFor('input[name=input]', 15)
                     ->type('input', 'This clears the input')
                     ->type('ant-input', 'This adds to the existing text')
                     ->assertInputValue('input', 'This clears the input')
