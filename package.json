@@ -10,5 +10,10 @@
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "vite": "^3.0.0"
+    },
+    "dependencies": {
+        "antd": "~4.19",
+        "react": "^17",
+        "react-dom": "^17"
     }
 }
